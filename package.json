@@ -8,7 +8,8 @@
     "build": "gitbook build ./note ./docs",
     "dev": "gitbook serve ./note ./docs",
     "start": "npm run dev",
-    "init": "gitbook init ./note"
+    "init": "gitbook init ./note",
+    "install": "gitbook install"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,12 @@
   "homepage": "https://github.com/shibin-you/jsBase#readme",
   "devDependencies": {
     "gitbook-cli": "^2.3.2"
+  },
+  "dependencies": {
+    "gitbook-plugin-fontsettings": "^2.0.0",
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-livereload": "0.0.1",
+    "gitbook-plugin-lunr": "^1.2.0",
+    "gitbook-plugin-sharing": "^1.0.2"
   }
 }

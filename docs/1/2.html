@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="3.html" />
+    
     
     <link rel="prev" href="1.html" />
     
@@ -140,6 +142,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -191,6 +206,47 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;</h1>
+<ul>
+<li>&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x5B89;&#x5168;&#x6A21;&#x5F0F;</li>
+</ul>
+<p>&#x5728;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x5FD8;&#x8BB0;&#x4F7F;&#x7528;new,&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x4F1A;&#x62A5;&#x9519;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Person = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">{name,sex,age}</span>) </span>{
+  <span class="hljs-keyword">this</span>.name = name
+  <span class="hljs-keyword">this</span>.sex = sex
+  <span class="hljs-keyword">this</span>.age = age
+}
+
+<span class="hljs-comment">// &#x6B63;&#x5E38;</span>
+<span class="hljs-keyword">var</span> a=<span class="hljs-keyword">new</span> Person({name:<span class="hljs-string">&apos;shibin&apos;</span>,sex:<span class="hljs-string">&apos;boy&apos;</span>,age:<span class="hljs-string">&apos;10&apos;</span>})
+<span class="hljs-built_in">console</span>.log(a.name)
+<span class="hljs-built_in">console</span>.log(a.age)
+<span class="hljs-built_in">console</span>.log(a.sex)
+
+<span class="hljs-comment">// &#x62A5;&#x9519;</span>
+<span class="hljs-keyword">var</span> b= Person({name:<span class="hljs-string">&apos;shibin&apos;</span>,sex:<span class="hljs-string">&apos;boy&apos;</span>,age:<span class="hljs-string">&apos;10&apos;</span>})
+<span class="hljs-built_in">console</span>.log(b.name)<span class="hljs-comment">//&#x62A5;&#x9519;</span>
+<span class="hljs-built_in">console</span>.log(b.age)<span class="hljs-comment">//&#x62A5;&#x9519;</span>
+<span class="hljs-built_in">console</span>.log(b.sex)<span class="hljs-comment">//&#x62A5;&#x9519;</span>
+</code></pre>
+<p>&#x5B89;&#x5168;&#x7C7B;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Person = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">{name,sex,age}</span>) </span>{
+  <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span> <span class="hljs-keyword">instanceof</span> Person){
+    <span class="hljs-keyword">this</span>.name = name
+    <span class="hljs-keyword">this</span>.sex = sex
+    <span class="hljs-keyword">this</span>.age = age
+  }<span class="hljs-keyword">else</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Person({
+      name,
+      sex,
+      age
+    })
+  }
+}
+<span class="hljs-keyword">var</span> b= Book({name:<span class="hljs-string">&apos;shibin&apos;</span>,sex:<span class="hljs-string">&apos;boy&apos;</span>,age:<span class="hljs-string">&apos;10&apos;</span>})
+<span class="hljs-built_in">console</span>.log(b.name)
+<span class="hljs-built_in">console</span>.log(b.age)
+<span class="hljs-built_in">console</span>.log(b.sex)
+</code></pre>
 
                                 
                                 </section>
@@ -218,10 +274,14 @@
 
             
                 
-                <a href="1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 灵活的语言">
+                <a href="1.html" class="navigation navigation-prev " aria-label="Previous page: 灵活的语言">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="3.html" class="navigation navigation-next " aria-label="Next page: 继承">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -230,7 +290,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"面向对象编程","level":"1.2.2","depth":2,"previous":{"title":"灵活的语言","level":"1.2.1","depth":2,"path":"1/1.md","ref":"1/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1/2.md","mtime":"2018-06-14T02:30:02.478Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-14T03:06:43.251Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"面向对象编程","level":"1.2.2","depth":2,"next":{"title":"继承","level":"1.2.3","depth":2,"path":"1/3.md","ref":"1/3.md","articles":[]},"previous":{"title":"灵活的语言","level":"1.2.1","depth":2,"path":"1/1.md","ref":"1/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1/2.md","mtime":"2018-06-14T05:44:37.532Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-14T06:19:43.823Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
