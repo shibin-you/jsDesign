@@ -1,0 +1,352 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>灵活的语言 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    第一章
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    灵活的语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >灵活的语言</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x7075;&#x6D3B;&#x7684;javascript">&#x7075;&#x6D3B;&#x7684;JavaScript</h2>
+<h3 id="&#x4E00;&#x4E2A;&#x68C0;&#x6D4B;&#x7C7B;">&#x4E00;&#x4E2A;&#x68C0;&#x6D4B;&#x7C7B;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> CheckRules=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+CheckRules.checkUsername=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkUsername&apos;</span>)
+}
+CheckRules.checkPassword=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkPassword&apos;</span>)
+}
+checkRules.checkUsername()
+checkRules.checkPassword()
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x5199;&#x6CD5;&#x6BCF;&#x6B21;new&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x4F1A;&#x5BF9;&#x7C7B;&#x7684;this&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x590D;&#x5236;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x4E00;&#x5B9A;&#x7684;&#x6D88;&#x8017;&#xFF0C;&#x53EF;&#x4EE5;&#x6539;&#x6210;&#x4E0B;&#x9762;&#x7684;&#x5199;&#x6CD5;</p>
+<pre><code class="lang-javascript">CheckRules.prototype.checkUsername=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkUsername&apos;</span>)
+}
+CheckRules.prototype.checkPassword=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkPassword&apos;</span>)
+}
+checkRules.checkUsername()
+checkRules.checkPassword()
+</code></pre>
+<ul>
+<li>&#x94FE;&#x5F0F;&#x6DFB;&#x52A0;</li>
+</ul>
+<p>&#x4E0A;&#x9762;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x8C03;&#x7528;2&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5BF9;&#x8C61;&#x5199;&#x4E86;2&#x6B21;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x5199;&#x6CD5;&#x662F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x672B;&#x5C3E;&#x5C06;&#x5F53;&#x524D;&#x7684;&#x5BF9;&#x8C61;this&#x8FD4;&#x56DE;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> CheckRules=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+CheckRules.prototype.checkUsername=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkUsername&apos;</span>)
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+}
+CheckRules.prototype.checkPassword=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;checkPassword&apos;</span>)
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+}
+checkRules.checkUsername().checkPassword()
+</code></pre>
+<h3 id="&#x51FD;&#x6570;&#x7684;&#x7956;&#x5148;">&#x51FD;&#x6570;&#x7684;&#x7956;&#x5148;</h3>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Function</span>.prototype.addMethods = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name, fn</span>) </span>{
+  <span class="hljs-keyword">this</span>[name] = fn
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span> === Methods)
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+}
+
+
+<span class="hljs-keyword">var</span> Methods =<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+Methods.addMethods(<span class="hljs-string">&apos;sayName&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;sayName:&apos;</span> + name)
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+  })
+  .addMethods(<span class="hljs-string">&apos;saySex&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">sex</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;saySex:&apos;</span> + sex)
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+  })
+<span class="hljs-built_in">console</span>.log(Methods)
+
+Methods.sayName(<span class="hljs-string">&apos;shibin&apos;</span>).saySex(<span class="hljs-string">&apos;boy&apos;</span>)
+</code></pre>
+<ul>
+<li>&#x7C7B;&#x7684;&#x65B9;&#x5F0F;  </li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Function</span>.prototype.addMethods = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name, fn</span>) </span>{
+  <span class="hljs-keyword">this</span>.prototype[name] = fn
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span> === Methods)
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+}
+
+
+<span class="hljs-keyword">var</span> Methods =<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+Methods.addMethods(<span class="hljs-string">&apos;sayName&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;sayName:&apos;</span> + name)
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+  })
+  .addMethods(<span class="hljs-string">&apos;saySex&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">sex</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;saySex:&apos;</span> + sex)
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+  })
+<span class="hljs-keyword">var</span> method=<span class="hljs-keyword">new</span> Methods()
+method.sayName(<span class="hljs-string">&apos;shibin&apos;</span>).saySex(<span class="hljs-string">&apos;boy&apos;</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="2.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 面向对象编程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"灵活的语言","level":"1.2.1","depth":2,"next":{"title":"面向对象编程","level":"1.2.2","depth":2,"path":"1/2.md","ref":"1/2.md","articles":[]},"previous":{"title":"第一章","level":"1.2","depth":1,"ref":"","articles":[{"title":"灵活的语言","level":"1.2.1","depth":2,"path":"1/1.md","ref":"1/1.md","articles":[]},{"title":"面向对象编程","level":"1.2.2","depth":2,"path":"1/2.md","ref":"1/2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1/1.md","mtime":"2018-06-14T03:12:42.697Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-14T03:06:43.251Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
