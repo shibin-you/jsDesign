@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/shibin-you/jsBase#readme",
   "devDependencies": {
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-fontsettings": "^2.0.0",
+    "gitbook-plugin-lunr": "^1.2.0"
   },
   "dependencies": {
-    "gitbook-plugin-fontsettings": "^2.0.0",
     "gitbook-plugin-highlight": "^2.0.3",
     "gitbook-plugin-livereload": "0.0.1",
-    "gitbook-plugin-lunr": "^1.2.0",
     "gitbook-plugin-sharing": "^1.0.2"
   }
 }

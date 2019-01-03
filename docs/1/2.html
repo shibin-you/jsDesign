@@ -206,6 +206,69 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;">&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;</h1>
+<h3 id="&#x5C01;&#x88C5;">&#x5C01;&#x88C5;</h3>
+<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> Book = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">id, name, price</span>) </span>{
+  <span class="hljs-comment">//&#x79C1;&#x6709;&#x5C5E;&#x6027;</span>
+  <span class="hljs-keyword">var</span> num = <span class="hljs-number">0</span>
+  <span class="hljs-comment">// &#x79C1;&#x6709;&#x65B9;&#x6CD5;</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">check</span>(<span class="hljs-params"></span>) </span>{}
+  <span class="hljs-comment">// &#x7279;&#x6743;&#x65B9;&#x6CD5;</span>
+  <span class="hljs-keyword">this</span>.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+  <span class="hljs-keyword">this</span>.setName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+  <span class="hljs-comment">//&#x516C;&#x6709;&#x5C5E;&#x6027;</span>
+  <span class="hljs-keyword">this</span>.id = id
+  <span class="hljs-keyword">this</span>.name = name
+  <span class="hljs-keyword">this</span>.price = price
+  <span class="hljs-comment">// &#x516C;&#x6709;&#x65B9;&#x6CD5;</span>
+  <span class="hljs-keyword">this</span>.copy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+  <span class="hljs-comment">// &#x6784;&#x9020;&#x5668;</span>
+  <span class="hljs-keyword">this</span>.setName(name)
+}
+<span class="hljs-comment">// &#x7C7B;&#x9759;&#x6001;&#x516C;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;</span>
+Book.language = <span class="hljs-string">&apos;en&apos;</span>
+<span class="hljs-comment">// &#x7C7B;&#x9759;&#x6001;&#x516C;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;</span>
+Book.language = <span class="hljs-string">&apos;en&apos;</span>
+
+Book.prototype.isSale = <span class="hljs-literal">true</span>
+
+<span class="hljs-keyword">var</span> book = <span class="hljs-keyword">new</span> Book(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;Pro JavaScript Design Patterns&apos;</span>, <span class="hljs-string">&apos;&#xFFE5;80&apos;</span>)
+<span class="hljs-built_in">console</span>.log(book.name)
+<span class="hljs-built_in">console</span>.log(book.isSale)
+
+<span class="hljs-built_in">console</span>.log(book.language) <span class="hljs-comment">//undefined</span>
+<span class="hljs-built_in">console</span>.log(Book.language) <span class="hljs-comment">//en</span>
+</code></pre>
+<p>&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x901A;&#x8FC7;&#x95ED;&#x5305;&#x6765;&#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x9759;&#x6001;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x901A;&#x8FC7;&#x95ED;&#x5305;&#x6765;&#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x9759;&#x6001;&#x53D8;&#x91CF;</span>
+<span class="hljs-keyword">var</span> Book = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// &#x9759;&#x6001;&#x79C1;&#x6709;&#x53D8;&#x91CF;</span>
+  <span class="hljs-keyword">var</span> pages = <span class="hljs-number">500</span>
+  <span class="hljs-comment">// &#x9759;&#x6001;&#x79C1;&#x6709;&#x65B9;&#x6CD5;</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayName</span>(<span class="hljs-params">name</span>) </span>{
+
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">id, name, price</span>) </span>{
+    <span class="hljs-comment">//&#x79C1;&#x6709;&#x5C5E;&#x6027;</span>
+    <span class="hljs-keyword">var</span> num = <span class="hljs-number">0</span>
+    <span class="hljs-comment">// &#x79C1;&#x6709;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">check</span>(<span class="hljs-params"></span>) </span>{}
+    <span class="hljs-comment">// &#x7279;&#x6743;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-keyword">this</span>.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+    <span class="hljs-keyword">this</span>.setName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+    <span class="hljs-comment">//&#x516C;&#x6709;&#x5C5E;&#x6027;</span>
+    <span class="hljs-keyword">this</span>.id = id
+    <span class="hljs-keyword">this</span>.name = name
+    <span class="hljs-keyword">this</span>.price = price
+    <span class="hljs-comment">// &#x516C;&#x6709;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-keyword">this</span>.copy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+    <span class="hljs-comment">// &#x6784;&#x9020;&#x5668;</span>
+    <span class="hljs-keyword">this</span>.setName(name)
+  }
+})()
+</code></pre>
 <ul>
 <li>&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x5B89;&#x5168;&#x6A21;&#x5F0F;</li>
 </ul>
@@ -246,6 +309,136 @@
 <span class="hljs-built_in">console</span>.log(b.name)
 <span class="hljs-built_in">console</span>.log(b.age)
 <span class="hljs-built_in">console</span>.log(b.sex)
+</code></pre>
+<h3 id="&#x7EE7;&#x627F;">&#x7EE7;&#x627F;</h3>
+<ul>
+<li>&#x5B50;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61; &#x7C7B;&#x5F0F;&#x7EE7;&#x627F;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Parent</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>.parentValue = <span class="hljs-number">1</span>
+  <span class="hljs-keyword">this</span>.name = <span class="hljs-string">&apos;parent&apos;</span>
+}
+Parent.prototype.type = <span class="hljs-string">&apos;Dog&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Son</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">this</span>.value = <span class="hljs-number">3</span>
+  <span class="hljs-keyword">this</span>.name = <span class="hljs-string">&apos;son&apos;</span>
+}
+Son.prototype = <span class="hljs-keyword">new</span> Parent()
+<span class="hljs-keyword">var</span> son = <span class="hljs-keyword">new</span> Son()
+<span class="hljs-built_in">console</span>.log(son.parentValue)
+<span class="hljs-built_in">console</span>.log(son.value)
+<span class="hljs-built_in">console</span>.log(son.type)
+<span class="hljs-comment">// &#x7528;instanceof &#x6765;&#x68C0;&#x67E5;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x662F;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-built_in">console</span>.log(son <span class="hljs-keyword">instanceof</span> Parent) <span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(son <span class="hljs-keyword">instanceof</span> Son) <span class="hljs-comment">//true</span>
+<span class="hljs-built_in">console</span>.log(Son <span class="hljs-keyword">instanceof</span> Parent) <span class="hljs-comment">//false</span>
+<span class="hljs-built_in">console</span>.log(Son.prototype <span class="hljs-keyword">instanceof</span> Parent) <span class="hljs-comment">//true</span>
+</code></pre>
+<p>&#x7F3A;&#x70B9;
+1&#x3001;&#x7531;&#x4E8E;&#x5B50;&#x7C7B;&#x901A;&#x8FC7;&#x539F;&#x578B;prototype&#x5BF9;&#x7236;&#x7C7B;&#x8FDB;&#x884C;&#x4E86;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;&#x7EE7;&#x627F;&#x4E86;&#x7236;&#x7C7B;&#xFF0C;&#x6240;&#x4EE5;&#x7236;&#x7C7B;&#x4E2D;&#x7684;&#x5171;&#x6709;&#x5C5E;&#x6027;&#x8981;&#x662F;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x88AB;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x5171;&#x7528;&#xFF0C;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x66F4;&#x6539;&#x5B50;&#x7C7B;&#x539F;&#x578B;&#x4ECE;&#x7236;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7EE7;&#x627F;&#x6765;&#x7684;&#x5171;&#x6709;&#x5C5E;&#x6027;&#x5C31;&#x4F1A;&#x5F71;&#x54CD;&#x5176;&#x4ED6;&#x5B50;&#x7C7B;
+2&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x7236;&#x7C7B;&#x7684;&#x65F6;&#x5019;&#x65E0;&#x6CD5;&#x5BF9;&#x7236;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5185;&#x7684;&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x53C2;&#x6570;</p>
+<ul>
+<li>&#x6784;&#x9020;&#x51FD;&#x6570;&#x7EE7;&#x627F;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Parent</span>(<span class="hljs-params">id</span>) </span>{
+  <span class="hljs-keyword">this</span>.id = id
+  <span class="hljs-keyword">this</span>.books = [<span class="hljs-string">&apos;js&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>, <span class="hljs-string">&apos;css&apos;</span>]
+}
+Parent.prototype.showBooks = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.books)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Son</span>(<span class="hljs-params">id</span>) </span>{
+  Parent.call(<span class="hljs-keyword">this</span>, id)
+}
+<span class="hljs-keyword">var</span> son1 = <span class="hljs-keyword">new</span> Son(<span class="hljs-number">1</span>)
+<span class="hljs-keyword">var</span> son2 = <span class="hljs-keyword">new</span> Son(<span class="hljs-number">2</span>)
+
+son1.books.push(<span class="hljs-string">&apos;nodejs&apos;</span>)
+<span class="hljs-built_in">console</span>.log(son1.books) <span class="hljs-comment">//[ &apos;js&apos;, &apos;html&apos;, &apos;css&apos;, &apos;nodejs&apos; ]</span>
+<span class="hljs-built_in">console</span>.log(son2.books) <span class="hljs-comment">//[ &apos;js&apos;, &apos;html&apos;, &apos;css&apos; ]</span>
+son1.showBooks() <span class="hljs-comment">// error son1.showBooks is not a function</span>
+</code></pre>
+<p>&#x7F3A;&#x70B9; &#x7236;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x4E0D;&#x4F1A;&#x88AB;&#x7EE7;&#x627F;</p>
+<ul>
+<li>&#x7EC4;&#x5408;&#x7EE7;&#x627F;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Parent</span>(<span class="hljs-params">id</span>) </span>{
+  <span class="hljs-keyword">this</span>.id = id
+  <span class="hljs-keyword">this</span>.books = [<span class="hljs-string">&apos;js&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>, <span class="hljs-string">&apos;css&apos;</span>]
+}
+Parent.prototype.getId = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.id)
+}
+<span class="hljs-comment">//  &#x6784;&#x9020;&#x51FD;&#x6570;&#x7EE7;&#x627F;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Son</span>(<span class="hljs-params">id, time</span>) </span>{
+  Parent.call(<span class="hljs-keyword">this</span>, id)
+  <span class="hljs-keyword">this</span>.time = time
+}
+<span class="hljs-comment">// &#x7C7B;&#x5F0F;&#x7EE7;&#x627F;</span>
+Son.prototype = <span class="hljs-keyword">new</span> Parent()
+<span class="hljs-keyword">var</span> son1 = <span class="hljs-keyword">new</span> Son(<span class="hljs-number">1</span>, <span class="hljs-number">3000</span>)
+<span class="hljs-keyword">var</span> son2 = <span class="hljs-keyword">new</span> Son(<span class="hljs-number">2</span>, <span class="hljs-number">1993</span>)
+son1.books.push(<span class="hljs-string">&apos;Nodejs in Action&apos;</span>)
+<span class="hljs-built_in">console</span>.log(son1.books) <span class="hljs-comment">//[ &apos;js&apos;, &apos;html&apos;, &apos;css&apos;, &apos;Nodejs in Action&apos; ]</span>
+son1.getId() <span class="hljs-comment">//1</span>
+<span class="hljs-built_in">console</span>.log(son1.time) <span class="hljs-comment">//3000</span>
+<span class="hljs-built_in">console</span>.log(son2.books) <span class="hljs-comment">//[ &apos;js&apos;, &apos;html&apos;, &apos;css&apos; ]</span>
+son2.getId() <span class="hljs-comment">//2</span>
+<span class="hljs-built_in">console</span>.log(son2.time) <span class="hljs-comment">//1993</span>
+</code></pre>
+<ul>
+<li>&#x539F;&#x578B;&#x5F0F;&#x7EE7;&#x627F;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inheritObject</span>(<span class="hljs-params">o</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F</span>(<span class="hljs-params"></span>) </span>{}
+  F.prototype = o
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> F()
+}
+<span class="hljs-keyword">var</span> book = {
+  name: <span class="hljs-string">&apos;js book&apos;</span>,
+  alikeBook: [<span class="hljs-string">&apos;css&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>]
+}
+<span class="hljs-keyword">var</span> book1 = inheritObject(book)
+book1.name = <span class="hljs-string">&apos;nodejs book&apos;</span>
+book1.alikeBook.push(<span class="hljs-string">&apos;koa&apos;</span>)
+
+<span class="hljs-keyword">var</span> book2 = inheritObject(book)
+book2.name = <span class="hljs-string">&apos;python book&apos;</span>
+book2.alikeBook.push(<span class="hljs-string">&apos;flask&apos;</span>)
+
+<span class="hljs-built_in">console</span>.log(book1.name) <span class="hljs-comment">//nodejs book</span>
+<span class="hljs-built_in">console</span>.log(book1.alikeBook) <span class="hljs-comment">//[ &apos;css&apos;, &apos;html&apos;, &apos;koa&apos;, &apos;flask&apos; ]</span>
+<span class="hljs-built_in">console</span>.log(book2.name) <span class="hljs-comment">//python book</span>
+<span class="hljs-built_in">console</span>.log(book2.alikeBook) <span class="hljs-comment">//[ &apos;css&apos;, &apos;html&apos;, &apos;koa&apos;, &apos;flask&apos; ]</span>
+<span class="hljs-built_in">console</span>.log(book.name) <span class="hljs-comment">//js book</span>
+<span class="hljs-built_in">console</span>.log(book.alikeBook) <span class="hljs-comment">//[ &apos;css&apos;, &apos;html&apos;, &apos;koa&apos;, &apos;flask&apos; ]</span>
+</code></pre>
+<ul>
+<li>&#x5BC4;&#x751F;&#x5F0F;&#x7EE7;&#x627F;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inheritObject</span>(<span class="hljs-params">o</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F</span>(<span class="hljs-params"></span>) </span>{}
+  F.prototype = o
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> F()
+}
+<span class="hljs-keyword">var</span> book = {
+  name: <span class="hljs-string">&apos;js book&apos;</span>,
+  alikeBook: [<span class="hljs-string">&apos;css&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>]
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createBook</span>(<span class="hljs-params">obj</span>) </span>{
+  <span class="hljs-keyword">var</span> o = inheritObject(obj)
+  <span class="hljs-comment">// &#x62D3;&#x5C55;&#x65B0;&#x5BF9;&#x8C61;</span>
+  o.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(name)
+  }
+  <span class="hljs-keyword">return</span> o
+}
+</code></pre>
+<pre><code class="lang-javascript">
+
 </code></pre>
 
                                 
@@ -290,7 +483,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"面向对象编程","level":"1.2.2","depth":2,"next":{"title":"继承","level":"1.2.3","depth":2,"path":"1/3.md","ref":"1/3.md","articles":[]},"previous":{"title":"灵活的语言","level":"1.2.1","depth":2,"path":"1/1.md","ref":"1/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1/2.md","mtime":"2018-06-14T05:44:37.532Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-14T06:19:43.823Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"面向对象编程","level":"1.2.2","depth":2,"next":{"title":"继承","level":"1.2.3","depth":2,"path":"1/3.md","ref":"1/3.md","articles":[]},"previous":{"title":"灵活的语言","level":"1.2.1","depth":2,"path":"1/1.md","ref":"1/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1/2.md","mtime":"2019-01-03T09:24:05.298Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-03T09:38:40.448Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -298,10 +491,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
